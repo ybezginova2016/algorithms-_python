@@ -19,6 +19,13 @@
 3) Возвращать новую строку, полученную в результате замены символов.
 """
 
+
+"""
+m = s.length / 2;
+1..m -> “:”
+if s.length % 2 -> .
+"""
+
 def convert_dots(s):
     dot_dict = {
         '.' : '.',
@@ -76,5 +83,17 @@ input_str = '..'
 output_str = convert_dots(input_str)
 print(output_str) # prints ':'
 
+##### optimized #####
+
+def convert_dots_adj(s):
+    m = len(s) // 2  # calculate the midpoint
+    out = ':' * m  # repeat ':' m times
+    if len(s) % 2 == 1:
+        out += '.'  # add a '.' if the length is odd
+    return out
+
+input_str = '.....'
+output_str = convert_dots_adj(input_str)
+print(output_str) # prints '::'
 
 
