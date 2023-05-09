@@ -1,3 +1,4 @@
+# ПЛОХО!!!
 # Find a certain element in the list
 def binary_search(list, item):
     low = 0
